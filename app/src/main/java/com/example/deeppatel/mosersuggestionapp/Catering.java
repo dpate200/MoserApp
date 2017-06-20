@@ -61,7 +61,7 @@ public class Catering extends AppCompatActivity {
                 this,
                 Suggestion.class,
                 android.R.layout.simple_list_item_1,
-                mDatabase.limitToLast(4)) {
+                mDatabase.limitToLast(10)) {
 
             @Override
             public Suggestion getItem(int position) {
