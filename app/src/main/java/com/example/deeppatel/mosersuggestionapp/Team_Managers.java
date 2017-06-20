@@ -1,5 +1,6 @@
 package com.example.deeppatel.mosersuggestionapp;
 
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,25 +23,23 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import android.provider.Settings.Secure;
+public class Team_Managers extends AppCompatActivity {
 
-public class Catering extends AppCompatActivity {
-
+    EditText editText_TM;
+    Button submit_TM;
+    ListView listview_TM;
     String userid;
-    Button submit_catering;
-    ListView listview_catering;
-    EditText editText_catering;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_catering);
-        userid = Secure.getString(Catering.this.getContentResolver(), Secure.ANDROID_ID);
-        editText_catering = (EditText) findViewById(R.id.editText_catering);
-        listview_catering = (ListView) findViewById(R.id.listview_catering);
-        submit_catering = (Button) findViewById(R.id.submit_catering);
+        setContentView(R.layout.activity_team__managers);
+        userid = Settings.Secure.getString(Team_Managers.this.getContentResolver(), Settings.Secure.ANDROID_ID);
+        editText_TM = (EditText) findViewById(R.id.editText_TM);
+        listview_TM = (ListView) findViewById(R.id.listview_TM);
+        submit_TM = (Button) findViewById(R.id.submit_TM);
 
-        final DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference().child("Catering/");
+        final DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference().child("Team Managers/");
 
         long cutoff = new Date().getTime() - TimeUnit.MILLISECONDS.convert(30, TimeUnit.DAYS);
         Query oldPosts = mDatabase.orderByChild("created/time").endAt(cutoff);
@@ -57,7 +56,7 @@ public class Catering extends AppCompatActivity {
 
             }
         });
-        final FirebaseListAdapter<Suggestion> CateringListAdapter = new FirebaseListAdapter<Suggestion>(
+        final FirebaseListAdapter<Suggestion> TMListAdapter = new FirebaseListAdapter<Suggestion>(
                 this,
                 Suggestion.class,
                 android.R.layout.simple_list_item_1,
@@ -76,11 +75,11 @@ public class Catering extends AppCompatActivity {
 
             }
         };
-        listview_catering.setAdapter(CateringListAdapter);
-        submit_catering.setOnClickListener(new View.OnClickListener() {
+        listview_TM.setAdapter(TMListAdapter);
+        submit_TM.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String getInput = editText_catering.getText().toString();
+                String getInput = editText_TM.getText().toString();
 
                 if(getInput == null || getInput.trim().equals("")) {
                     Toast.makeText(getBaseContext(), "Input is empty", Toast.LENGTH_LONG).show();
@@ -93,7 +92,7 @@ public class Catering extends AppCompatActivity {
                     Map<String, Object> x = new HashMap<>();
                     x.put(k, s.toMap());
                     mDatabase.updateChildren(x);
-                    editText_catering.setText("");
+                    editText_TM.setText("");
                 }
             }
         });

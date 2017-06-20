@@ -13,8 +13,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void onClick_Catering(View v ){
+    public void onClick_Catering(View v ) {
         startActivity(new Intent(MainActivity.this, Catering.class));
+    }
+    public void onClick_TM(View v) {
+        startActivity(new Intent(MainActivity.this, Team_Managers.class));
     }
 
 }
