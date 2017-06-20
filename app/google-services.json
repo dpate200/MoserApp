@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "720880238109",
+    "firebase_url": "https://moser-app.firebaseio.com",
+    "project_id": "moser-app",
+    "storage_bucket": "moser-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720880238109:android:8d6b33252141f341",
+        "android_client_info": {
+          "package_name": "com.example.deeppatel.mosersuggestionapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "720880238109-8eprco0ofvg4c2p57e7agrv77vecbf06.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.deeppatel.mosersuggestionapp",
+            "certificate_hash": "14fc962d14702aaf702af35c4be4277bad7406d4"
+          }
+        },
+        {
+          "client_id": "720880238109-us2v8i2drm75d4nlf0kdv9fdkmmsqeq4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDanyS9HycCKSx-9dicLJpr23Z6QeSVG94"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "720880238109-us2v8i2drm75d4nlf0kdv9fdkmmsqeq4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Moser Suggestion App</string>
+    <string name="team_managers">Team Managers</string>
+    <string name="ceo">CEO</string>
+    <string name="catering">Catering</string>
+    <string name="charity">Charity</string>
+    <string name="events">Events</string>
+    <string name="finance">Finance</string>
+    <string name="hr">HR</string>
+    <string name="other">Other</string>
+    <string name="suggestion">Suggestion:</string>
+    <string name="submit">submit</string>
+</resources>
