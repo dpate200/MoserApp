@@ -7,7 +7,7 @@
     android:focusableInTouchMode="true">
 
     <EditText
-        android:id="@+id/editText_TM"
+        android:id="@+id/editText_HR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -15,13 +15,13 @@
         android:inputType="textCapSentences|textMultiLine" />
 
     <Button
-        android:id="@+id/submit_TM"
+        android:id="@+id/submit_HR"
         android:layout_width="110dp"
         android:layout_height="50dp"
         android:text="@string/submit" />
 
     <ListView
-        android:id="@+id/listview_TM"
+        android:id="@+id/listview_HR"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

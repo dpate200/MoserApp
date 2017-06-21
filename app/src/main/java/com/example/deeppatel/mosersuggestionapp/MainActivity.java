@@ -19,5 +19,11 @@ public class MainActivity extends AppCompatActivity {
     public void onClick_TM(View v) {
         startActivity(new Intent(MainActivity.this, Team_Managers.class));
     }
+    public void onClick_HR(View v){
+        startActivity(new Intent(MainActivity.this, HR.class ));
+    }
+    public void onClick_Finance(View v){
+        startActivity(new Intent(MainActivity.this, Finance.class));
+    }
 
 }
