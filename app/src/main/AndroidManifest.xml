@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Catering" />
-        <activity android:name=".Team_Managers"></activity>
+        <activity android:name=".Team_Managers" />
+        <activity android:name=".HR" />
+        <activity android:name=".Finance"></activity>
     </application>
 
 </manifest>
